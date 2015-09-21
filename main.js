@@ -1,5 +1,5 @@
-var Universe = require('../core/BaconUniverse.js'),
-    ConsoleUtilities = require('./ConsoleUtilities.js');
+var Universe = require('concrete-runtime').Universe,
+    ConsoleUtilities = require('./ConsoleUtilities');
 
 // While loop
 // var INPUT = '0#A 1 + _#B 5 > _ 6 0 ? _ jump @B @A move @A jump';

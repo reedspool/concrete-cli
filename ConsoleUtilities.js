@@ -1,8 +1,9 @@
-var util = require('../core/util.js')
-var config = require('../core/config.js')
+var concrete = require('concrete-runtime');
+var util = concrete.util;
+var config = concrete.config;
 var _ = require('lodash')
-var Tape = require('../core/Tape.js')
-var Block = require('../core/Block.js')
+var Tape = concrete.Tape;
+var Block = concrete.Block;
 var Immutable = require('immutable');
 
 function printUniverse(universe) {
@@ -36,7 +37,7 @@ function printUniverse(universe) {
     if (Block.matches(block, daemonBlock)) {
       daemonIndex = index
     }
-    
+
     var info = word_beginning_indicis[index] = {
       sumSoFar: sum,
       length: Block.toString(block).length,
@@ -59,7 +60,7 @@ if(!daemonWord) debugger; /* TESTING - Delete me */
   w(Tape.toString(tape));
   w(
     _.range(daemonWord.sumSoFar)
-      .map(function () { return ' ' }).join('') + 
+      .map(function () { return ' ' }).join('') +
     _.range(daemonWord.length)
       .map(function () { return '_' }).join('')
   )

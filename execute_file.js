@@ -1,9 +1,6 @@
 var Bacon = require('baconjs'),
-    Universe = require('../core/Universe.js'),
-    config = require('../core/config.js'),
-    util = require('../core/util.js'),
-    BaconUniverse = require('../core/BaconUniverse.js'),
-    ConsoleUtilities = require('./ConsoleUtilities.js'),
+    ConsoleUtilities = require('./ConsoleUtilities'),
+    concrete = require('concrete-runtime'),
     fs = require('fs');
 
 var INTERVAL = 750;
@@ -14,7 +11,7 @@ fs.readFile(FILE_NAME, 'utf8', function (err,data) {
     return console.log(err);
   }
 
-  var stream = BaconUniverse.asStream(Universe.fromString(data))
+  var stream = concrete.BaconUniverse.asStream(concrete.Universe.fromString(data))
     .bufferingThrottle(INTERVAL);
 
   stream.filter(function (d) { return !(d[0] && d[0] == '<no-more>'); })
