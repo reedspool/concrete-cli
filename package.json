@@ -4,7 +4,7 @@
   "description": "CLI for Concrete programming language",
   "main": "main.js",
   "dependencies": {
-    "concrete-runtime": "https://github.com/codeempathy/concrete-runtime",
+    "concrete-runtime": "https://github.com/reedspool/concrete-runtime",
     "immutable": "^3.7.5",
     "lodash": "^3.10.1"
   },
@@ -12,7 +12,7 @@
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/codeempathy/concrete-cli.git"
+    "url": "https://github.com/reedspool/concrete-cli.git"
   },
   "keywords": [
     "programming",
@@ -21,7 +21,7 @@
   "author": "reed",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/codeempathy/concrete-cli/issues"
+    "url": "https://github.com/reedspool/concrete-cli/issues"
   },
-  "homepage": "https://github.com/codeempathy/concrete-cli"
+  "homepage": "https://github.com/reedspool/concrete-cli"
 }
